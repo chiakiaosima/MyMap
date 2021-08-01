@@ -6,12 +6,21 @@
 //
 
 import SwiftUI
+import MapKit
 
-struct MapView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+struct MapView: UIViewRepresentable {
+    
+    //　表示するviewを作成するときに実行
+    func makeUIView(context: Context) -> MKMapView {
+        // MKMapViewのインスタンス生成
+        MKMapView()
+    } // makeUIView　ここまで
+    
+    // 表示した View が更新されるたびに実行
+    func updateUIView(_ uiView: MKMapView, context: Context) {
+    } //updateUIViewここまで
+    
+} //MapViewここまで
 
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
